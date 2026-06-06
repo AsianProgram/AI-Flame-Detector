@@ -1,0 +1,448 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.1\tools/idf_monitor.py -p COM8 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32p4 --revision 1 --decode-panic backtrace C:\Users\Dennis\esp\testv9\mipi_isp_dsi\build\mipi_isp_dsi.elf C:\Users\Dennis\esp\testv9\mipi_isp_dsi\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM8'
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x30f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x164c
+load:0x4ff29ed0,len:0xdfc
+load:0x4ff2cbd0,len:0x336c
+entry 0x4ff29eda
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Mar  9 2026 00:59:54[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 007d0000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=40170020 size=2cb1d4h (2929108) map[0m
+[0;32mI (574) esp_image: segment 1: paddr=002db1fc vaddr=30100000 size=00068h (   104) load[0m
+[0;32mI (576) esp_image: segment 2: paddr=002db26c vaddr=4ff00000 size=04dach ( 19884) load[0m
+[0;32mI (583) esp_image: segment 3: paddr=002e0020 vaddr=40000020 size=166840h (1468480) map[0m
+[0;32mI (830) esp_image: segment 4: paddr=00446868 vaddr=4ff04dac size=0e1fch ( 57852) load[0m
+[0;32mI (843) esp_image: segment 5: paddr=00454a6c vaddr=4ff13000 size=02a34h ( 10804) load[0m
+[0;32mI (851) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (851) boot: Disabling RNG early entropy source...[0m
+[0;32mI (864) hex_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (864) hex_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (864) hex_psram: DriveStr.    : 0x00 (25 Ohm)[0m
+[0;32mI (865) hex_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (869) hex_psram: density      : 0x07 (256 Mbit)[0m
+[0;32mI (874) hex_psram: good-die     : 0x06 (Pass)[0m
+[0;32mI (878) hex_psram: SRF          : 0x02 (Slow Refresh)[0m
+[0;32mI (883) hex_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (887) hex_psram: BurstLen     : 0x03 (2048 Byte)[0m
+[0;32mI (891) hex_psram: BitMode      : 0x01 (X16 Mode)[0m
+[0;32mI (896) hex_psram: Readlatency  : 0x04 (14 cycles@Fixed)[0m
+[0;32mI (901) hex_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (905) MSPI DQS: tuning success, best phase id is 0[0m
+[0;32mI (1082) MSPI DQS: tuning success, best delayline id is 16[0m
+[0;32mI (1083) esp_psram: Found 32MB PSRAM device[0m
+[0;32mI (1083) esp_psram: Speed: 200MHz[0m
+[0;32mI (1084) hex_psram: psram CS IO is dedicated[0m
+[0;32mI (1087) cpu_start: Multicore app[0m
+[0;32mI (2041) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (2051) cpu_start: Pro cpu start user code[0m
+[0;32mI (2051) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (2051) app_init: Application information:[0m
+[0;32mI (2051) app_init: Project name:     mipi_isp_dsi[0m
+[0;32mI (2055) app_init: App version:      1[0m
+[0;32mI (2059) app_init: Compile time:     Mar  9 2026 00:59:35[0m
+[0;32mI (2064) app_init: ELF file SHA256:  304fda59c...[0m
+[0;32mI (2069) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (2073) efuse_init: Min chip rev:     v0.1[0m
+[0;32mI (2077) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (2081) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (2085) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (2091) heap_init: At 4FF17760 len 00023860 (142 KiB): RAM[0m
+[0;32mI (2096) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (2102) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (2107) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (2112) heap_init: At 30100068 len 00001F98 (7 KiB): TCM[0m
+[0;32mI (2118) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator[0m
+[0;32mI (2125) spi_flash: detected chip: gd[0m
+[0;32mI (2128) spi_flash: flash io: dio[0m
+[0;33mW (2131) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (2144) main_task: Started on CPU0[0m
+[0;32mI (2154) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (2154) main_task: Calling app_main()[0m
+[0;32mI (2154) ek79007: version: 1.0.4[0m
+[0;32mI (2214) mipi_isp_dsi: Display framebuffer: 0x48000b00[0m
+[0;32mI (2364) ov5647: Detected Camera sensor PID=0x5647[0m
+[0;32mI (2364) sensor_init: fmt[0].name:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;32mI (2364) sensor_init: fmt[1].name:MIPI_2lane_24Minput_RAW8_800x640_50fps[0m
+[0;32mI (2364) sensor_init: fmt[2].name:MIPI_2lane_24Minput_RAW8_800x800_50fps[0m
+[0;32mI (2374) sensor_init: fmt[3].name:MIPI_2lane_24Minput_RAW10_1920x1080_30fps[0m
+[0;32mI (2384) sensor_init: fmt[4].name:MIPI_2lane_24Minput_RAW10_1280x960_binning_45fps[0m
+[0;32mI (2934) sensor_init: Format in use:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;33mW (2944) FbsLoader: The address of fbs model in flash is not aligned with 16 bytes.[0m
+[0;33mW (3034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3414) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;32mI (3414) mipi_isp_dsi: frame_buffer ptr: 0x48000b00[0m
+[0;32mI (3414) mipi_isp_dsi: last_frame ptr: 0x483e8bc0[0m
+[0;33mW (3434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8414) mipi_isp_dsi: Timer callback executed[0m
+[0;33mW (8434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8434) mipi_isp_dsi: Stopping camera[0m
+[0;32mI (8444) mipi_isp_dsi: Freezing last frame[0m
+[0;32mI (8474) mipi_isp_dsi: Starting inference[0m
+[0;32mI (9804) mipi_isp_dsi: Inference completed.[0m
+[0;32mI (9804) AI: cat=0 score=0.00 box=[0,0,0,0][0m
+[0;32mI (9804) main_task: Returned from app_main()[0m
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x30f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x164c
+load:0x4ff29ed0,len:0xdfc
+load:0x4ff2cbd0,len:0x336c
+entry 0x4ff29eda
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Mar  9 2026 00:59:54[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 007d0000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=40170020 size=2cb1d4h (2929108) map[0m
+[0;32mI (574) esp_image: segment 1: paddr=002db1fc vaddr=30100000 size=00068h (   104) load[0m
+[0;32mI (576) esp_image: segment 2: paddr=002db26c vaddr=4ff00000 size=04dach ( 19884) load[0m
+[0;32mI (583) esp_image: segment 3: paddr=002e0020 vaddr=40000020 size=166840h (1468480) map[0m
+[0;32mI (830) esp_image: segment 4: paddr=00446868 vaddr=4ff04dac size=0e1fch ( 57852) load[0m
+[0;32mI (843) esp_image: segment 5: paddr=00454a6c vaddr=4ff13000 size=02a34h ( 10804) load[0m
+[0;32mI (851) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (851) boot: Disabling RNG early entropy source...[0m
+[0;32mI (864) hex_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (864) hex_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (864) hex_psram: DriveStr.    : 0x00 (25 Ohm)[0m
+[0;32mI (865) hex_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (869) hex_psram: density      : 0x07 (256 Mbit)[0m
+[0;32mI (874) hex_psram: good-die     : 0x06 (Pass)[0m
+[0;32mI (878) hex_psram: SRF          : 0x02 (Slow Refresh)[0m
+[0;32mI (883) hex_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (887) hex_psram: BurstLen     : 0x03 (2048 Byte)[0m
+[0;32mI (891) hex_psram: BitMode      : 0x01 (X16 Mode)[0m
+[0;32mI (896) hex_psram: Readlatency  : 0x04 (14 cycles@Fixed)[0m
+[0;32mI (901) hex_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (905) MSPI DQS: tuning success, best phase id is 0[0m
+[0;32mI (1082) MSPI DQS: tuning success, best delayline id is 16[0m
+[0;32mI (1083) esp_psram: Found 32MB PSRAM device[0m
+[0;32mI (1083) esp_psram: Speed: 200MHz[0m
+[0;32mI (1084) hex_psram: psram CS IO is dedicated[0m
+[0;32mI (1087) cpu_start: Multicore app[0m
+[0;32mI (2041) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (2051) cpu_start: Pro cpu start user code[0m
+[0;32mI (2051) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (2051) app_init: Application information:[0m
+[0;32mI (2051) app_init: Project name:     mipi_isp_dsi[0m
+[0;32mI (2056) app_init: App version:      1[0m
+[0;32mI (2059) app_init: Compile time:     Mar  9 2026 00:59:35[0m
+[0;32mI (2064) app_init: ELF file SHA256:  304fda59c...[0m
+[0;32mI (2069) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (2073) efuse_init: Min chip rev:     v0.1[0m
+[0;32mI (2077) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (2081) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (2085) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (2091) heap_init: At 4FF17760 len 00023860 (142 KiB): RAM[0m
+[0;32mI (2097) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (2102) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (2107) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (2113) heap_init: At 30100068 len 00001F98 (7 KiB): TCM[0m
+[0;32mI (2118) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator[0m
+[0;32mI (2125) spi_flash: detected chip: gd[0m
+[0;32mI (2128) spi_flash: flash io: dio[0m
+[0;33mW (2131) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (2144) main_task: Started on CPU0[0m
+[0;32mI (2154) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (2154) main_task: Calling app_main()[0m
+[0;32mI (2154) ek79007: version: 1.0.4[0m
+[0;32mI (2214) mipi_isp_dsi: Display framebuffer: 0x48000b00[0m
+[0;32mI (2364) ov5647: Detected Camera sensor PID=0x5647[0m
+[0;32mI (2364) sensor_init: fmt[0].name:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;32mI (2364) sensor_init: fmt[1].name:MIPI_2lane_24Minput_RAW8_800x640_50fps[0m
+[0;32mI (2364) sensor_init: fmt[2].name:MIPI_2lane_24Minput_RAW8_800x800_50fps[0m
+[0;32mI (2374) sensor_init: fmt[3].name:MIPI_2lane_24Minput_RAW10_1920x1080_30fps[0m
+[0;32mI (2384) sensor_init: fmt[4].name:MIPI_2lane_24Minput_RAW10_1280x960_binning_45fps[0m
+[0;32mI (2934) sensor_init: Format in use:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;33mW (2944) FbsLoader: The address of fbs model in flash is not aligned with 16 bytes.[0m
+[0;33mW (3034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3414) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;32mI (3414) mipi_isp_dsi: frame_buffer ptr: 0x48000b00[0m
+[0;32mI (3414) mipi_isp_dsi: last_frame ptr: 0x483e8bc0[0m
+[0;33mW (3434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8414) mipi_isp_dsi: Timer callback executed[0m
+[0;33mW (8434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8434) mipi_isp_dsi: Stopping camera[0m
+[0;32mI (8444) mipi_isp_dsi: Freezing last frame[0m
+[0;32mI (8474) mipi_isp_dsi: Starting inference[0m
+[0;32mI (9804) mipi_isp_dsi: Inference completed.[0m
+[0;32mI (9804) AI: cat=0 score=0.00 box=[0,0,0,0][0m
+[0;32mI (9804) main_task: Returned from app_main()[0m
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x30f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x164c
+load:0x4ff29ed0,len:0xdfc
+load:0x4ff2cbd0,len:0x336c
+entry 0x4ff29eda
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Mar  9 2026 00:59:54[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (28) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (33) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (37) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 16MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 007d0000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=40170020 size=2cb1d4h (2929108) map[0m
+[0;32mI (574) esp_image: segment 1: paddr=002db1fc vaddr=30100000 size=00068h (   104) load[0m
+[0;32mI (576) esp_image: segment 2: paddr=002db26c vaddr=4ff00000 size=04dach ( 19884) load[0m
+[0;32mI (583) esp_image: segment 3: paddr=002e0020 vaddr=40000020 size=166840h (1468480) map[0m
+[0;32mI (830) esp_image: segment 4: paddr=00446868 vaddr=4ff04dac size=0e1fch ( 57852) load[0m
+[0;32mI (843) esp_image: segment 5: paddr=00454a6c vaddr=4ff13000 size=02a34h ( 10804) load[0m
+[0;32mI (851) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (851) boot: Disabling RNG early entropy source...[0m
+[0;32mI (864) hex_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (864) hex_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (864) hex_psram: DriveStr.    : 0x00 (25 Ohm)[0m
+[0;32mI (865) hex_psram: dev id       : 0x03 (generation 4)[0m
+[0;32mI (869) hex_psram: density      : 0x07 (256 Mbit)[0m
+[0;32mI (874) hex_psram: good-die     : 0x06 (Pass)[0m
+[0;32mI (878) hex_psram: SRF          : 0x02 (Slow Refresh)[0m
+[0;32mI (883) hex_psram: BurstType    : 0x00 ( Wrap)[0m
+[0;32mI (887) hex_psram: BurstLen     : 0x03 (2048 Byte)[0m
+[0;32mI (891) hex_psram: BitMode      : 0x01 (X16 Mode)[0m
+[0;32mI (896) hex_psram: Readlatency  : 0x04 (14 cycles@Fixed)[0m
+[0;32mI (901) hex_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (905) MSPI DQS: tuning success, best phase id is 0[0m
+[0;32mI (1082) MSPI DQS: tuning success, best delayline id is 16[0m
+[0;32mI (1083) esp_psram: Found 32MB PSRAM device[0m
+[0;32mI (1083) esp_psram: Speed: 200MHz[0m
+[0;32mI (1084) hex_psram: psram CS IO is dedicated[0m
+[0;32mI (1087) cpu_start: Multicore app[0m
+[0;32mI (2041) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (2051) cpu_start: Pro cpu start user code[0m
+[0;32mI (2051) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (2051) app_init: Application information:[0m
+[0;32mI (2051) app_init: Project name:     mipi_isp_dsi[0m
+[0;32mI (2056) app_init: App version:      1[0m
+[0;32mI (2059) app_init: Compile time:     Mar  9 2026 00:59:35[0m
+[0;32mI (2064) app_init: ELF file SHA256:  304fda59c...[0m
+[0;32mI (2069) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (2073) efuse_init: Min chip rev:     v0.1[0m
+[0;32mI (2077) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (2081) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (2085) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (2091) heap_init: At 4FF17760 len 00023860 (142 KiB): RAM[0m
+[0;32mI (2096) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (2102) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (2107) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (2112) heap_init: At 30100068 len 00001F98 (7 KiB): TCM[0m
+[0;32mI (2118) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator[0m
+[0;32mI (2125) spi_flash: detected chip: gd[0m
+[0;32mI (2128) spi_flash: flash io: dio[0m
+[0;33mW (2131) spi_flash: Detected size(32768k) larger than the size in the binary image header(16384k). Using the size in the binary image header.[0m
+[0;32mI (2144) main_task: Started on CPU0[0m
+[0;32mI (2154) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (2154) main_task: Calling app_main()[0m
+[0;32mI (2154) ek79007: version: 1.0.4[0m
+[0;32mI (2214) mipi_isp_dsi: Display framebuffer: 0x48000b00[0m
+[0;32mI (2364) ov5647: Detected Camera sensor PID=0x5647[0m
+[0;32mI (2364) sensor_init: fmt[0].name:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;32mI (2364) sensor_init: fmt[1].name:MIPI_2lane_24Minput_RAW8_800x640_50fps[0m
+[0;32mI (2364) sensor_init: fmt[2].name:MIPI_2lane_24Minput_RAW8_800x800_50fps[0m
+[0;32mI (2374) sensor_init: fmt[3].name:MIPI_2lane_24Minput_RAW10_1920x1080_30fps[0m
+[0;32mI (2384) sensor_init: fmt[4].name:MIPI_2lane_24Minput_RAW10_1280x960_binning_45fps[0m
+[0;32mI (2934) sensor_init: Format in use:MIPI_2lane_24Minput_RAW8_800x1280_50fps[0m
+[0;33mW (2944) FbsLoader: The address of fbs model in flash is not aligned with 16 bytes.[0m
+[0;33mW (3034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3414) dl::Model: Minimize() will delete variables not used in model inference, which will make it impossible to test or debug the model.[0m
+[0;32mI (3414) mipi_isp_dsi: frame_buffer ptr: 0x48000b00[0m
+[0;32mI (3414) mipi_isp_dsi: last_frame ptr: 0x483e8bc0[0m
+[0;33mW (3434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (3934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (4934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (5934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (6934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7534) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7634) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7734) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7834) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (7934) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8034) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8134) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8234) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;33mW (8334) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8414) mipi_isp_dsi: Timer callback executed[0m
+[0;33mW (8434) CSI: csi recv API, transaction queue is full, failed to send transaction to the queue[0m
+[0;32mI (8434) mipi_isp_dsi: Stopping camera[0m
+[0;32mI (8444) mipi_isp_dsi: Freezing last frame[0m
+[0;32mI (8474) mipi_isp_dsi: Starting inference[0m
+[0;32mI (9804) mipi_isp_dsi: Inference completed.[0m
+[0;32mI (9804) AI: cat=0 score=0.00 box=[0,0,0,0][0m
+[0;32mI (9804) main_task: Returned from app_main()[0m
